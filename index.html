@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carolina Hobant | Sombreros para vivir el verano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F5E9D7;--coral-white:#FFF8F0;--turq:#7FC8C4;--sea:#3E7C9B;--terra:#E8A087;--sage:#A8B89A;--ink:#2B4A5A;--muted:#587280;--card:#FFF8F0;--line:#e6d9c3;--btn-ink:#1f3a47;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sand:#1d2b32;--coral-white:#243540;--card:#243540;--ink:#eaf1f3;--muted:#a9bcc5;--line:#35505c;--sea:#7fb8d3;color-scheme:dark}}
+:root[data-theme="dark"]{--sand:#1d2b32;--coral-white:#243540;--card:#243540;--ink:#eaf1f3;--muted:#a9bcc5;--line:#35505c;--sea:#7fb8d3;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--sand);color:var(--ink);font:400 17px/1.7 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;margin:0;line-height:1.1;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 38px}
+:focus-visible{outline:3px solid var(--sea);outline-offset:3px}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 15px Nunito,sans-serif;padding:13px 26px;border-radius:99px;text-decoration:none;background:var(--turq);color:var(--btn-ink);transition:background .2s,transform .2s}
+.btn:hover{background:#6bb9b5;transform:translateY(-2px)}
+.btn.coral{background:var(--terra)}
+.btn.coral:hover{background:#e08f72}
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--sand) 88%,transparent);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{font:700 1.7rem "Cormorant Garamond",serif;text-decoration:none;color:var(--sea);letter-spacing:.5px}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:15px;font-weight:600}
+nav a:hover{color:var(--sea)}
+.menu{display:none;background:none;border:1.5px solid var(--sea);color:var(--sea);border-radius:10px;padding:5px 11px;font-size:18px}
+.hero{padding:0;min-height:100svh;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(180deg,#bfe3e0 0%,#e8f1e6 52%,var(--sand) 52.1%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(180deg,#27494f 0%,#2a4148 52%,var(--sand) 52.1%)}}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:110px;padding-bottom:140px;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);font-weight:600;color:#23495b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1{color:#eaf1f3}}
+.hero p{font-size:1.15rem;max-width:40ch;margin:18px 0 28px;color:var(--ink)}
+.hatbox{display:grid;place-items:center}
+.hatbox svg{width:100%;max-width:400px;filter:drop-shadow(0 18px 18px rgba(43,74,90,.18));animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg) translateY(-6px)}}
+.waves{position:absolute;left:0;right:0;bottom:0;height:130px;z-index:1}
+.waves svg{width:200%;height:100%;animation:drift 18s linear infinite}
+@keyframes drift{to{transform:translateX(-50%)}}
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border-radius:24px;padding:22px;box-shadow:0 6px 22px rgba(43,74,90,.09)}
+.hat{height:170px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px}
+.hat svg{width:150px}
+.card h3{font-size:1.5rem;margin-bottom:4px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:15px}
+.price-sec{background:var(--coral-white)}
+.plist{display:grid;gap:14px}
+.prow{display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:center;background:var(--sand);border-radius:20px;padding:20px 26px}
+.prow h3{font-size:1.5rem}
+.prow span{color:var(--muted);font-size:15px;grid-column:1}
+.prow b{grid-column:2;grid-row:1/3;font:700 1.5rem "Cormorant Garamond",serif;color:var(--sea);white-space:nowrap}
+.prow.feat{background:var(--terra);color:#2a1d17}
+.prow.feat span{color:#4a3329}
+.prow.feat b{color:#2a1d17}
+.note{margin-top:26px;padding:18px 24px;border-radius:20px;background:var(--sage);color:#1f2f28;font-weight:600}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about .art{aspect-ratio:1;border-radius:200px 200px 24px 24px;background:linear-gradient(180deg,var(--turq),var(--sage));display:grid;place-items:center}
+.about .art svg{width:60%}
+.about p{margin:0 0 14px}
+.stars{color:#d68a3f;letter-spacing:3px}
+.quote{font:500 1.35rem/1.35 "Cormorant Garamond",serif;margin:8px 0 14px}
+.who{font-size:14px;color:var(--muted);font-weight:700}
+.contact{background:var(--sea);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px}
+.contact .lead{color:#e3f0f4}
+.contact h2{color:#fff}
+.social{margin-top:20px;font-size:15px}
+form{display:grid;gap:12px;background:var(--coral-white);padding:26px;border-radius:24px;color:var(--ink)}
+form input,form textarea{font:inherit;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--sand);color:var(--ink);width:100%}
+form textarea{min-height:110px;resize:vertical}
+.ok{display:none;background:var(--sage);color:#1f2f28;padding:12px 16px;border-radius:14px;font-weight:600}
+footer{background:#2B4A5A;color:#cfe0e6;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.logo.f{color:#fff;font-size:1.5rem}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#25a05a;color:#fff;border-radius:99px;padding:13px 20px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){.hero .wrap,.about,.contact .wrap{grid-template-columns:1fr}.hatbox{order:-1;max-width:260px;margin:0 auto}.g3{grid-template-columns:1fr 1fr}.menu{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--sand);flex-direction:column;padding:18px 22px;gap:16px}nav ul.open{display:flex}.hero .wrap{padding-top:96px}}
+@media (max-width:560px){.g3{grid-template-columns:1fr}section{padding:60px 0}.prow{padding:18px}}
+@media (prefers-reduced-motion:reduce){.hatbox svg,.waves svg{animation:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#inicio">Carolina Hobant</a>
+<nav aria-label="Principal"><ul id="menu"><li><a href="#inicio">Inicio</a></li><li><a href="#coleccion">Colección</a></li><li><a href="#precios">Precios</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+<button class="menu" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap">
+<div>
+<h1>Vive el verano a tu ritmo</h1>
+<p>Sombreros hechos con calma, con materiales naturales y la brisa del mar en cada trenzado.</p>
+<a class="btn" href="#coleccion">Ver colección</a>
+</div>
+<div class="hatbox" aria-hidden="true">
+<svg viewBox="0 0 300 220"><ellipse cx="150" cy="150" rx="140" ry="38" fill="#E9CE9B"/><ellipse cx="150" cy="146" rx="140" ry="34" fill="#F1DAAE"/><path d="M80 142C80 70 112 34 150 34s70 36 70 108c-20 12-120 12-140 0z" fill="#F1DAAE"/><path d="M80 130c20 12 120 12 140 0v14c-20 12-120 12-140 0z" fill="#3E7C9B"/><path d="M92 100c40 12 76 12 116 0M88 78c42 14 82 14 124 0" stroke="#E0C189" stroke-width="3" fill="none"/><circle cx="212" cy="136" r="6" fill="#E8A087"/></svg>
+</div>
+</div>
+<div class="waves" aria-hidden="true"><svg viewBox="0 0 1200 130" preserveAspectRatio="none"><path d="M0 60Q75 20 150 60T300 60T450 60T600 60T750 60T900 60T1050 60T1200 60V130H0z" fill="#7FC8C4" opacity=".55"/><path d="M0 85Q75 55 150 85T300 85T450 85T600 85T750 85T900 85T1050 85T1200 85V130H0z" fill="#3E7C9B" opacity=".5"/></svg></div>
+</section>
+
+<section id="coleccion"><div class="wrap">
+<h2>Colección de verano</h2>
+<p class="lead">Seis formas de acompañar tus días de sol, desde la caminata hasta la tarde en la orilla.</p>
+<div class="grid g3" id="hats"></div>
+</div></section>
+
+<section class="price-sec" id="precios"><div class="wrap">
+<h2>Precios por categoría</h2>
+<p class="lead">Cada rango depende del material, el tamaño y el trabajo artesanal.</p>
+<div class="plist" id="plist"></div>
+<p class="note">Precios en soles. Envíos disponibles a todo el país. Pregunta por descuentos al comprar 2 o más sombreros.</p>
+</div></section>
+
+<section id="nosotros"><div class="wrap about">
+<div class="art" aria-hidden="true"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="74" rx="54" ry="16" fill="#FFF8F0"/><path d="M26 70C26 36 42 18 60 18s34 18 34 52c-10 6-58 6-68 0z" fill="#FFF8F0"/><path d="M26 64c10 6 58 6 68 0v7c-10 6-58 6-68 0z" fill="#E8A087"/></svg></div>
+<div>
+<h2>Hechos a mano, pensados para el mar</h2>
+<p>Carolina Hobant nació de una idea simple: que un sombrero pueda ser tan tranquilo como una mañana en la playa.</p>
+<p>Trabajamos con paja, fibras tejidas y algodón. Cada pieza pasa por manos de artesanas que cuidan la forma, el ala y el acabado.</p>
+<p>Nuestros colores vienen de la arena, el agua y la sal. Así queremos que te sientas al usarlos.</p>
+</div></div></section>
+
+<section style="background:var(--coral-white)"><div class="wrap">
+<h2>Lo que dicen nuestras clientas</h2>
+<div class="grid g3" style="margin-top:30px">
+<div class="card" style="background:var(--sand)"><div class="stars">★★★★★</div><p class="quote">Es liviano, no se deforma con el viento y me protege todo el día.</p><div class="who">Valeria M.</div></div>
+<div class="card" style="background:var(--sand)"><div class="stars">★★★★★</div><p class="quote">El tejido a mano se nota. Lo uso en cada viaje a la playa.</p><div class="who">Daniela R.</div></div>
+<div class="card" style="background:var(--sand)"><div class="stars">★★★★★</div><p class="quote">Me llegó rápido y bien empacado. Tal como en las fotos.</p><div class="who">Lucía P.</div></div>
+</div></div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<div>
+<h2>Escríbenos</h2>
+<p class="lead">Cuéntanos qué sombrero buscas y te respondemos el mismo día.</p>
+<a class="btn coral" href="https://wa.me/51900000000" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+<p class="social">Instagram · Facebook · TikTok<br>@carolinahobant</p>
+</div>
+<form id="f" novalidate>
+<input name="n" placeholder="Nombre" aria-label="Nombre" required>
+<input name="e" type="email" placeholder="Correo" aria-label="Correo" required>
+<textarea name="m" placeholder="¿Qué sombrero te interesa?" aria-label="Mensaje"></textarea>
+<button class="btn" type="submit">Enviar mensaje</button>
+<div class="ok" id="ok" role="status">Mensaje enviado. Te responderemos pronto.</div>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><a class="logo f" href="#inicio">Carolina Hobant</a>
+<ul><li><a href="#coleccion">Colección</a></li><li><a href="#precios">Precios</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#contacto">Contacto</a></li></ul>
+<div>© 2026 Carolina Hobant. Todos los derechos reservados.</div></div></footer>
+<a class="wa" href="https://wa.me/51900000000" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+function hat(c,b,r,t){return '<svg viewBox="0 0 150 100"><ellipse cx="75" cy="68" rx="'+r+'" ry="'+(r>60?16:12)+'" fill="'+c+'"/><path d="M40 64C40 28 56 14 75 14s35 14 35 50c-10 6-60 6-70 0z" fill="'+c+'"/><path d="M40 58c10 6 60 6 70 0v8c-10 6-60 6-70 0z" fill="'+b+'"/></svg>'}
+var H=[["Paja clásico","Ala media y trenzado fino, para todos los días.","#F1DAAE","#3E7C9B",58,"#e4f2f0"],["Ala ancha","Sombra amplia para horas largas de sol.","#EBCF9A","#E8A087",72,"#f6e3da"],["Estilo Panamá","Tejido fino y copa con pliegue elegante.","#F7EBCB","#2B4A5A",60,"#e8efe3"],["Bucket","Ligero, plegable y fácil de llevar.","#9FC9C6","#FFF8F0",50,"#f1ead9"],["Visera","Fresca para caminar, correr o jugar.","#FFF8F0","#7FC8C4",52,"#dfeef0"],["Tejido a mano","Pieza artesanal, trabajada por completo a mano.","#C9A978","#A8B89A",64,"#eef0e2"]];
+document.getElementById('hats').innerHTML=H.map(function(h){return '<div class="card reveal"><div class="hat" style="background:'+h[5]+'">'+hat(h[2],h[3],h[4])+'</div><h3>'+h[0]+'</h3><p>'+h[1]+'</p><a class="btn" href="#contacto">Consultar</a></div>'}).join('');
+var PR=[["Bucket y viseras","Para el día a día y el deporte","S/ 60 – S/ 95"],["Sombreros de paja clásicos","Trenzado fino, ala media","S/ 90 – S/ 140"],["Sombreros de ala ancha","Mayor protección solar","S/ 130 – S/ 190"],["Estilo Panamá","Tejido fino y acabado elegante","S/ 180 – S/ 280"],["Edición artesanal tejida a mano","Piezas únicas, hechas a mano","S/ 220 – S/ 350"]];
+document.getElementById('plist').innerHTML=PR.map(function(p,i){return '<div class="prow'+(i==4?' feat':'')+'"><h3>'+p[0]+'</h3><span>'+p[1]+'</span><b>'+p[2]+'</b></div>'}).join('');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target;if(!f.n.value||!f.e.value){f.n.focus();return}document.getElementById('ok').style.display='block';f.reset()});
+document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')})});
+</script>
+</body>
+</html>
